@@ -24,7 +24,6 @@ class DatabaseManager: ObservableObject {
     func create(title: String, explanation: String) {
         objectWillChange.send()
         do {
-            let realm = try Realm()
             let item = Item()
             item.title = title
             item.explanation = explanation
